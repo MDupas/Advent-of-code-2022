@@ -56,10 +56,6 @@ public class Valve {
             tunnels.add(valves.get(tunnel));
     }
 
-    public void addTunnel(Valve valve) {
-        tunnels.add(valve);
-    }
-
     @Override
     public String toString() {
         return "Valve{" +
@@ -74,7 +70,7 @@ public class Valve {
     private String displayTunnel() {
         StringBuilder stringBuilder = new StringBuilder();
         for (Valve tunnel : tunnels) {
-            stringBuilder.append(tunnel.name).append(",");;
+            stringBuilder.append(tunnel.name).append(",");
         }
         stringBuilder.deleteCharAt(stringBuilder.length() - 1);
         return stringBuilder.toString();
